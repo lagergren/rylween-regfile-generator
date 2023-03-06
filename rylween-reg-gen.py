@@ -9,11 +9,11 @@ argc = len(argv)
 
 def usage():
     script = argv[0].split(os.sep)[-1]
-    print("Usage: ", script, "<name of owner> [output file]")
+    print("Usage:", script, "<name of owner> [output file]")
     print()
     print("If no output file is given, a Base64 encoding of the registration file is written to stdout.")
     print()
-    print("The resulting file, or base64 encoding of the output string should be")
+    print("The resulting file, or Base64 encoding of the output string as bytes, should be")
     print("placed in 'Doors:Rylween/RYLWEEN.REG' to register a copy of Adventurers of Rylween")
     print("running in an Amiga environment.")
     print()
@@ -56,3 +56,5 @@ if argc == 3:
 else:
     base64_string = base64.b64encode(bytes)
     print("Base64 representation of license file:", base64_string.decode())
+
+print("Done.")
